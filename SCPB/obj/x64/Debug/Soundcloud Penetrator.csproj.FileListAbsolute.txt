@@ -1,0 +1,85 @@
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\Soundcloud Penetrator.exe.config
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\Soundcloud Penetrator.exe
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\Soundcloud Penetrator.pdb
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\CefSharp.Core.dll
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\CefSharp.dll
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\CefSharp.OffScreen.dll
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\CefSharp.Wpf.dll
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\MahApps.Metro.dll
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\CefSharp.OffScreen.pdb
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\CefSharp.OffScreen.xml
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\CefSharp.Wpf.pdb
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\CefSharp.Wpf.xml
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\CefSharp.pdb
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\CefSharp.xml
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\CefSharp.Core.pdb
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\CefSharp.Core.xml
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\MahApps.Metro.pdb
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\MahApps.Metro.xml
+C:\_Visual_Studio\MPB\MPB\obj\x64\Debug\MPBMain.g.cs
+C:\_Visual_Studio\MPB\MPB\obj\x64\Debug\App.g.cs
+C:\_Visual_Studio\MPB\MPB\obj\x64\Debug\Soundcloud Penetrator_MarkupCompile.cache
+C:\_Visual_Studio\MPB\MPB\obj\x64\Debug\Soundcloud Penetrator_MarkupCompile.lref
+C:\_Visual_Studio\MPB\MPB\obj\x64\Debug\App.baml
+C:\_Visual_Studio\MPB\MPB\obj\x64\Debug\MPBMain.baml
+C:\_Visual_Studio\MPB\MPB\obj\x64\Debug\Soundcloud Penetrator.g.resources
+C:\_Visual_Studio\MPB\MPB\obj\x64\Debug\MPB.Properties.Resources.resources
+C:\_Visual_Studio\MPB\MPB\obj\x64\Debug\Soundcloud Penetrator.csproj.GenerateResource.Cache
+C:\_Visual_Studio\MPB\MPB\obj\x64\Debug\Soundcloud Penetrator.exe
+C:\_Visual_Studio\MPB\MPB\obj\x64\Debug\Soundcloud Penetrator.pdb
+C:\_Visual_Studio\MPB\MPB\obj\x64\Debug\Resources\Icons.baml
+C:\_Visual_Studio\MPB\MPB\obj\x64\Debug\Resources\IconsNonShared.baml
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\System.Windows.Interactivity.dll
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\help.rtf
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\Soundcloud Penetrator.exe.manifest
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\Soundcloud Penetrator.application
+C:\_Visual_Studio\MPB\MPB\obj\x64\Debug\Soundcloud Penetrator.TrustInfo.xml
+C:\_Visual_Studio\MPB\MPB\obj\x64\Debug\Soundcloud Penetrator.exe.manifest
+C:\_Visual_Studio\MPB\MPB\obj\x64\Debug\Soundcloud Penetrator.application
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\Portable.Licensing.dll
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\Portable.Licensing.xml
+C:\_Visual_Studio\MPB\MPB\bin\x64\Debug\lic.lic
+C:\_Visual_Studio\MPB\MPB\obj\x64\Debug\Soundcloud Penetrator.csprojResolveAssemblyReference.cache
+C:\_Visual_Studio\MPB\MPB\obj\x64\Debug\Soundcloud Penetrator.csproj.CoreCompileInputs.cache
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\help.rtf
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\Soundcloud Penetrator.exe.config
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\Soundcloud Penetrator.exe.manifest
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\Soundcloud Penetrator.application
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\Soundcloud Penetrator.exe
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\Soundcloud Penetrator.pdb
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\CefSharp.Core.dll
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\CefSharp.dll
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\CefSharp.OffScreen.dll
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\CefSharp.Wpf.dll
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\MahApps.Metro.dll
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\Portable.Licensing.dll
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\System.Windows.Interactivity.dll
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\CefSharp.OffScreen.pdb
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\CefSharp.OffScreen.xml
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\CefSharp.Wpf.pdb
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\CefSharp.Wpf.xml
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\CefSharp.pdb
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\CefSharp.xml
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\CefSharp.Core.pdb
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\CefSharp.Core.xml
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\MahApps.Metro.pdb
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\MahApps.Metro.xml
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\bin\x64\Debug\Portable.Licensing.xml
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\obj\x64\Debug\Soundcloud Penetrator.csprojResolveAssemblyReference.cache
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\obj\x64\Debug\Resources\Icons.baml
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\obj\x64\Debug\Resources\IconsNonShared.baml
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\obj\x64\Debug\MPBMain.g.cs
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\obj\x64\Debug\App.g.cs
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\obj\x64\Debug\Soundcloud Penetrator_MarkupCompile.cache
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\obj\x64\Debug\Soundcloud Penetrator_MarkupCompile.lref
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\obj\x64\Debug\App.baml
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\obj\x64\Debug\MPBMain.baml
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\obj\x64\Debug\Soundcloud Penetrator.g.resources
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\obj\x64\Debug\MPB.Properties.Resources.resources
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\obj\x64\Debug\Soundcloud Penetrator.csproj.GenerateResource.Cache
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\obj\x64\Debug\Soundcloud Penetrator.csproj.CoreCompileInputs.cache
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\obj\x64\Debug\Soundcloud Penetrator.TrustInfo.xml
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\obj\x64\Debug\Soundcloud Penetrator.exe.manifest
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\obj\x64\Debug\Soundcloud Penetrator.application
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\obj\x64\Debug\Soundcloud Penetrator.exe
+C:\_Visual_Studio\Soundcloud Penetrator\MPB\obj\x64\Debug\Soundcloud Penetrator.pdb

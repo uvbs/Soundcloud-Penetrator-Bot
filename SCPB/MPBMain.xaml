@@ -1,0 +1,207 @@
+﻿<Controls:MetroWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:wpf="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+        xmlns:local="clr-namespace:MPB"
+        xmlns:ControlzEx="clr-namespace:ControlzEx;assembly=MahApps.Metro" x:Class="MPB.MainWindow"
+        mc:Ignorable="d"             
+        WindowState="Normal"
+        Icon="icon.ico"
+        BorderThickness="0" 
+        GlowBrush="Black"
+        ResizeMode="CanResizeWithGrip"
+        WindowTransitionsEnabled="False"
+        WindowStartupLocation="CenterScreen"
+        Title="Soundcloud Penetrator v0.7.2alpha" TitleCaps="True"
+        ShowIconOnTitleBar="True"
+        ShowTitleBar="True"
+        RenderOptions.ClearTypeHint="Enabled"
+        TextOptions.TextFormattingMode="Display" Height="800" Width="1232" MinHeight="800" MinWidth="1232" HorizontalContentAlignment="Center">
+
+
+    <Controls:MetroWindow.Flyouts>
+        <Controls:FlyoutsControl>
+            <Controls:Flyout x:Name="Helpdesk" Header="HelpDesk" Position="Right" Width="400" AnimateOpacity="True">
+                <RichTextBox x:Name="helpDeskDoc" VerticalAlignment="Top" Width="350" Height="640" Foreground="White" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" />
+            </Controls:Flyout>
+        </Controls:FlyoutsControl>
+    </Controls:MetroWindow.Flyouts>
+
+
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <Button x:Name="soundcloudViewButton" Click="soundcloudPenView_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="40"
+                   Height="20"
+                   Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Visual="{StaticResource appbar_social_soundcloud}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <TextBlock Margin="4 0 0 0"
+                   VerticalAlignment="Center"
+                   Text="Soundcloud" />
+                </StackPanel>
+            </Button>
+            <Button Click="settings_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="20"
+                   Height="20"
+                   Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Visual="{StaticResource appbar_settings}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <TextBlock Margin="4 0 0 0"
+                   VerticalAlignment="Center"
+                   Text="Settings" />
+                </StackPanel>
+            </Button>
+            <Button Click="helpDesk_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="15"
+                   Height="20"
+                   Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Visual="{StaticResource appbar_question}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <TextBlock Margin="4 0 0 0"
+                   VerticalAlignment="Center"
+                   Text="Help" />
+                </StackPanel>
+            </Button>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+
+
+
+
+
+
+
+    <Grid x:Name="MPB_Main" UseLayoutRounding="True">
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid x:Name="soundcloudView" Margin="0,0,-20,584" ScrollViewer.VerticalScrollBarVisibility="Disabled" Panel.ZIndex="-1" HorizontalAlignment="Center" d:IsHidden="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300*"/>
+                <ColumnDefinition Width="13*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox x:Name="txtBox_songUrl" HorizontalAlignment="Left" Height="23" Margin="4,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="324" AutomationProperties.HelpText="Please type in your soundcloud song url" KeyDown="scOnKeyHandler" FontFamily="Segoe UI Light"/>
+            <Button x:Name="loadPageButton" Content="LOAD" HorizontalAlignment="Left" Margin="333,21,0,0" VerticalAlignment="Top" Width="75" Click="loadPageButton_Click" Height="23" FontFamily="Segoe UI Light"/>
+            <Label Content="Soundcloud Link" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" FontFamily="Segoe WP Light"/>
+            <Button x:Name="genPlaysButton" Content="AUTO" HorizontalAlignment="Left" Margin="4,142,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="genPlaysButton_Click" FontFamily="Segoe UI Light"/>
+            <Label Content="plays:" HorizontalAlignment="Left" Margin="161,141,0,0" VerticalAlignment="Top" Height="30" FontFamily="Segoe WP Light"/>
+            <Label x:Name="genPlaysNumber" Content="0" HorizontalAlignment="Left" Margin="193,142,0,0" VerticalAlignment="Top" Height="30" FontFamily="Segoe WP Light" Width="53"/>
+            <TextBox x:Name="maxPlays" HorizontalAlignment="Left" Height="23" Margin="5,66,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="59"/>
+            <Label Content="Max. Plays" HorizontalAlignment="Left" Margin="0,44,0,0" VerticalAlignment="Top" Height="30" FontFamily="Segoe WP Light"/>
+            <Button x:Name="genPlaysCancel" Content="Cancel" HorizontalAlignment="Left" Margin="86,142,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="genPlaysCancel_Click" FontFamily="Segoe UI Light"/>
+            <Label Content="TbP (in Sec.)" HorizontalAlignment="Left" Margin="0,88,0,0" VerticalAlignment="Top" Height="30" FontFamily="Segoe WP Light"/>
+            <TextBox x:Name="tbPlays" HorizontalAlignment="Left" Height="23" Margin="6,110,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="59"/>
+            <CheckBox x:Name="proxyChechbox" Content="Proxylist" HorizontalAlignment="Left" Margin="333,115,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Light" Checked="useProxyServer"/>
+            <Button x:Name="loadProxies" Content="GET PROXIES" HorizontalAlignment="Left" Margin="333,51,0,0" VerticalAlignment="Top" Width="75" Click="loadProxies_Click" Height="23" FontFamily="Segoe UI Light"/>
+            <ListBox x:Name="proxyListbox" HorizontalAlignment="Left" Height="159" Margin="414,21,0,0" VerticalAlignment="Top" Width="113" Background="#FF2D2D30" FontSize="10" FontFamily="Segoe UI Semilight" ScrollViewer.VerticalScrollBarVisibility="Visible" SelectedIndex="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListBoxItem}">
+                        <Setter Property="Height" Value="14" />
+                        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Visible"/>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+            </ListBox>
+            <Label x:Name="proxylistLabel" Content="Proxy list" HorizontalAlignment="Left" Margin="409,0,0,0" VerticalAlignment="Top" Height="30" FontFamily="Segoe WP Light"/>
+            <Button x:Name="accountLoginButton" Content="LOGIN" HorizontalAlignment="Left" Margin="660,21,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="accountLoginButton_Click" FontFamily="Segoe UI Light"/>
+            <Button x:Name="accountLogoutButton" Content="SIGN OUT" HorizontalAlignment="Left" Margin="660,51,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="accountLogoutButton_Click" FontFamily="Segoe UI Light"/>
+            <TextBox x:Name="userNameTb" HorizontalAlignment="Left" Height="23" Margin="535,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Segoe UI Light"/>
+            <Label x:Name="accountNameLabel" Content="Accountname" HorizontalAlignment="Left" Margin="530,0,0,0" VerticalAlignment="Top" Height="30" FontFamily="Segoe WP Light"/>
+            <TextBox x:Name="passwordTb" HorizontalAlignment="Left" Height="23" Margin="535,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Segoe UI Light"/>
+            <Label x:Name="passwordLabel" Content="Password" HorizontalAlignment="Left" Margin="530,45,0,0" VerticalAlignment="Top" Height="30" FontFamily="Segoe WP Light"/>
+            <DataGrid x:Name="accountListDataGrid" HorizontalAlignment="Left" Height="158" Margin="740,21,0,0" VerticalAlignment="Top" GridLinesVisibility="Horizontal" ColumnHeaderHeight="5" HeadersVisibility="None"  Panel.ZIndex="-1" FontSize="10" FontFamily="Segoe UI Semilight" SelectionChanged="accountListDataGrid_SelectionChanged" Width="296" HorizontalScrollBarVisibility="Disabled" BorderBrush="#FF2D2D30" SelectionMode="Single" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" HorizontalGridLinesBrush="#FF686868" VerticalGridLinesBrush="#FF686868" RowHeaderWidth="5" Background="#FF2D2D30" VerticalScrollBarVisibility="Visible" BorderThickness="0"  >
+
+                <DataGrid.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Delete" Click="accountDelete_Click" >
+                        </MenuItem>
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
+
+            </DataGrid>
+            <Button x:Name="saveAccounts" Content="SAVE LIST" HorizontalAlignment="Left" Margin="1041,13,0,0" VerticalAlignment="Top" Width="75" Click="saveAccountList_Click" Height="23" FontFamily="Segoe UI Light" />
+            <DataGrid x:Name="additionalSongs" HorizontalAlignment="Left" Height="82" Margin="70,51,0,0" VerticalAlignment="Top" Width="258" HeadersVisibility="None" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled" FontSize="10" FontFamily="Segoe UI Semilight" GridLinesVisibility="Horizontal" BorderBrush="#FFFEFEFF" Background="#FF2D2D30" SelectionChanged="songSet_SelectionChanged" RowHeight="4" SelectionMode="Single" CanUserResizeRows="False" RowDetailsVisibilityMode="Visible" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False">
+                <DataGrid.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Delete" Click="songSetDelete_Click" >
+                        </MenuItem>
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
+            </DataGrid>
+            <Label Content="" HorizontalAlignment="Left" Margin="65,44,0,0" VerticalAlignment="Top" Height="30" FontFamily="Segoe WP Light"/>
+            <CheckBox x:Name="rotationCheckBox" Content="Rotation" HorizontalAlignment="Left" Margin="333,137,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Light" />
+            <Button x:Name="genPlaysCancel_Copy" Content="SAVE LIST" HorizontalAlignment="Left" Margin="251,142,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="saveSongList_Click" FontFamily="Segoe UI Light"/>
+            <Button x:Name="autoFollowButt" Content="FOLLOWBOT" HorizontalAlignment="Left" Margin="660,82,0,0" VerticalAlignment="Top" Width="75" Click="autoFollowButt_Click" Height="23" FontFamily="Segoe UI Light" FontSize="10"/>
+            <Button x:Name="autoFollowButt_Copy" Content="♥ HELICOPTER" HorizontalAlignment="Left" Margin="660,113,0,0" VerticalAlignment="Top" Width="75" Click="likeHelicopter_Click" Height="23" FontFamily="Segoe UI Light" FontSize="10"/>
+            <Label x:Name="accountListLabel" Content="Accountlist" HorizontalAlignment="Left" Margin="735,0,0,0" VerticalAlignment="Top" Height="30" FontFamily="Segoe WP Light"/>
+            <Rectangle Fill="#FF333337" HorizontalAlignment="Left" Height="2" Margin="804,13,0,0" VerticalAlignment="Top" Width="232"/>
+            <Rectangle Fill="#FF333337" HorizontalAlignment="Left" Height="2" Margin="613,13,0,0" VerticalAlignment="Top" Width="122"/>
+            <Rectangle Fill="#FF333337" HorizontalAlignment="Left" Height="2" Margin="466,13,0,0" VerticalAlignment="Top" Width="59"/>
+            <Rectangle Fill="#FF333337" HorizontalAlignment="Left" Height="2" Margin="94,13,0,0" VerticalAlignment="Top" Width="314"/>
+            <Grid x:Name="Max_Counts" Margin="529,89,465,52">
+                <TextBox x:Name="maxFollowAccountsTxtBox" HorizontalAlignment="Left" Margin="5,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" FontFamily="Segoe UI Semilight" Height="23"/>
+                <Label x:Name="maxFollowLabel" Content="Follows" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" FontSize="10"/>
+                <TextBox x:Name="maxLikesTxtBox" HorizontalAlignment="Left" Margin="45,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" FontFamily="Segoe UI Semilight" Height="23"/>
+                <Label x:Name="maxFollowLabel_Copy1" Content="Likes" HorizontalAlignment="Left" Margin="40,0,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" FontSize="10"/>
+                <TextBox x:Name="maxRepostsTxt" HorizontalAlignment="Left" Margin="85,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" FontFamily="Segoe UI Semilight" Height="23"/>
+                <Label x:Name="maxFollowLabel_Copy4" Content="Reposts" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" FontSize="10"/>
+
+            </Grid>
+            <Grid x:Name="Counter_Labels" Margin="529,131,522,3">
+                <Label x:Name="maxFollowLabel_Copy" Content="followed:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" FontFamily="Segoe WP Light"/>
+                <Label x:Name="followedAccountsL" Content="0" HorizontalAlignment="Left" Margin="48,1,-54,0" VerticalAlignment="Top" Height="30" FontFamily="Segoe WP Light" Width="71"/>
+                <Label x:Name="maxFollowLabel_Copy2" Content="liked:" HorizontalAlignment="Left" Margin="20,15,0,0" VerticalAlignment="Top" Height="30" FontFamily="Segoe WP Light"/>
+                <Label x:Name="likedLabel" Content="0" HorizontalAlignment="Left" Margin="48,15,-54,0" VerticalAlignment="Top" Height="30" FontFamily="Segoe WP Light" Width="71"/>
+                <Label x:Name="maxFollowLabel_Copy3" Content="reposts:" HorizontalAlignment="Left" Margin="5,29,0,0" VerticalAlignment="Top" Height="30" FontFamily="Segoe WP Light"/>
+                <Label x:Name="repostsLabel" Content="0" HorizontalAlignment="Left" Margin="48,30,-54,-9" VerticalAlignment="Top" Height="30" FontFamily="Segoe WP Light" Width="71"/>
+
+            </Grid>
+            <Button x:Name="autoRepostButton" Content="REPOSTOMAT" HorizontalAlignment="Left" Margin="660,144,0,0" VerticalAlignment="Top" Width="75" Click="repostBot_Click" Height="23" FontFamily="Segoe UI Light" FontSize="10"/>
+            <Button x:Name="loadProxies_Copy" Content="EDIT" HorizontalAlignment="Left" Margin="333,81,0,0" VerticalAlignment="Top" Width="75" Click="editProxies_Click" Height="23" FontFamily="Segoe UI Light"/>
+
+        </Grid>
+        <Grid x:Name="settingsView" Margin="10,0,10,589" HorizontalAlignment="Center" Width="1204">
+            <Button x:Name="devToolsButton" Content="DEV TOOLS" HorizontalAlignment="Left" Margin="1026,47,0,0" VerticalAlignment="Top" Width="75" Click="devToolsButton_Click" Height="23" FontFamily="Segoe UI Light" FontSize="10"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="270" FontFamily="Segoe UI Semilight" Text="Copyright 2017 - Soundcloud Penetrator 0.7.2 alpha"/>
+            <Rectangle Fill="#FF333337" HorizontalAlignment="Left" Height="2" Margin="10,38,0,0" VerticalAlignment="Top" Width="1184"/>
+            <Button x:Name="devToolsButton_Copy" Content="GANGBANG" HorizontalAlignment="Left" Margin="1116,47,0,0" VerticalAlignment="Top" Width="75" Click="openNewInstance" Height="23" FontFamily="Segoe UI Light" FontSize="10"/>
+            <Grid x:Name="License_Grid" Margin="0,20,0,0" HorizontalAlignment="Center" Width="564" VerticalAlignment="Center">
+                <TextBox x:Name="publicKeyTb" HorizontalAlignment="Left" Height="76" Margin="3,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" FontFamily="Segoe UI Semilight"/>
+                <Label Content="Enter the public key:" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe UI Semilight"/>
+                <TextBox x:Name="licenseTb" HorizontalAlignment="Left" Height="76" Margin="283,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" FontFamily="Segoe UI Semilight" IsReadOnly="true"/>
+                <Label Content="License Validation result:" HorizontalAlignment="Left" Margin="280,0,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight"/>
+                <Button x:Name="validateLicenseButton" Content="VALIDATE" HorizontalAlignment="Left" Margin="198,102,0,0" VerticalAlignment="Top" Width="75" Click="validateLicense_Click" Height="23" FontFamily="Segoe UI Light" FontSize="10"/>
+            </Grid>
+        </Grid>
+
+        <wpf:ChromiumWebBrowser Grid.Row="0"
+                                x:Name="Browser"
+                                Margin="0,185,0,0" 
+                                Foreground="{x:Null}"
+            ControlzEx:KeyboardNavigationEx.AlwaysShowFocusVisual="True" HorizontalContentAlignment="Stretch" />
+
+
+
+
+
+
+
+
+    </Grid>
+</Controls:MetroWindow>
+    
